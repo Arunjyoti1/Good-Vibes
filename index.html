@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Website</title>
     <link rel="stylesheet" href="text.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <main>
-        <h1 id="title"> Hey! How is your day going? </h1>
+        <h1 id="title"> Hey! <br> How is your day going? </h1>
         <div class="master-div-style">
-            <p id="description"> Tell us some positive incidents happened to you today.</p>
-            <form id="survey-form" action="/do-something">
+            <p id="description"> Tell us a positive event happened to you today.</p>
+            <form id="survey-form" action="mailto:arunjyotidebnath@outlook.com" method="POST" enctype="text/plain" name="emailform" >
                 <div class="form-rows">
                     <div class="labels">
                         <label for="name" id="name-label">Name</label>
@@ -29,23 +33,23 @@
                       <input type="email" id="email" class="input-fields" placeholder="Enter your email address" required>
                     </div>
                   </div>
-                  <div class="form-rows">
+                <div class="form-rows">
                     <div class="labels">
                       <label for="number" id="number-label">On a scale of 1-10, how good was it?</label>
                     </div>
                     <div class="fields">
-                      <input type="number" id="number" class="input-fields" placeholder="Enter a number between 1 and 10" min="1" max="10">
+                      <input type="number" id="number" class="input-fields" placeholder="Enter a number between 1 and 10" min="1" max="10" required>
                     </div>
                   </div>
-                          <div class="form-rows">
+                <div class="form-rows">
                     <div class="labels">
-                        <label for="dropdown" id="dropdown-label"> Where did it happen?</label>
+                        <label for="dropdown" id="dropdown-label"> Where did that happen?</label>
                     </div>
                     <div class="fields">
                         <select name="Location of the positive event" id="dropdown" class="dropdown">
-                            <option value="home"> At Home</option>
+                            <option value="home"> At Home</option>                            
+                            <option value="outside"> On the Frontyard/Backyard of your Home</option>
                             <option value="commute"> On the Road</option>
-                            <option value="outside"> Outside of your Home</option>
                             <option value="other"> Other</option>
                         </select>
                     </div>
@@ -55,7 +59,7 @@
                         <label for="time-of-the-day">At what time did that happen?</label>
                     </div>
                     <div class="fields">
-                        <ul id="time-of-day style="list-style: none;">
+                        <ul id="time-of-day style="list-style: none;>
                             <li class="radio">
                                 <label for=""> Morning 
                                     <input name="time-radio" type="radio" value="1" class="user-selection">
@@ -71,42 +75,9 @@
                                     <input type="radio" name="time-radio" value="3" class="user-selection">
                                 </label>
                             </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="form-rows">
-                    <div class="labels">
-                        <label for="feelings">
-                            What wmotions did you experience?
-                            <br>
-                            (Select all that appliees)
-                        </label>
-                    </div>
-                    <div class="fields">
-                        <ul id="feelings" style="list-style: none;">
                             <li class="radio">
-                                <label for="">
-                                    <input type="checkbox" name="feeling-check" value="1" class="user-selection"> Exited
-                                </label>
-                            </li>
-                            <li class="radio">
-                                <label for="">
-                                    <input type="checkbox" name="feeling-check" value="2" class="user-selection"> Humbled
-                                </label>
-                            </li>
-                            <li class="radio">
-                                <label for="">
-                                    <input type="checkbox" name="feeling-check" value="3" class="user-selection">Elated
-                                </label>
-                            </li>
-                            <li class="radio">
-                                <label for="">
-                                    <input type="checkbox" value="4" name="feeling-check">Loved
-                                </label>
-                            </li>
-                            <li class="radio">
-                                <label for="">
-                                    <input type="checkbox" name="feeling-check" value="5" class="user-selection"> Enthusiastic
+                                <label for=""> Night
+                                    <input type="radio" name="time-radio" value="4" class="user-selection">
                                 </label>
                             </li>
                         </ul>
@@ -115,7 +86,7 @@
                 <div class="from-rows">
                     <div class="labels"> 
                         <label for="event-details">
-                            Please describe more about your experience
+                            Please describe more about your positive event.
                         </label>
                     </div>
                     <div class="fields">

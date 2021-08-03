@@ -1,7 +1,9 @@
 body { text-align: center; 
-    background-color: #a9d7e9;}
+    background-color: #a9d7e9;
+    font-family: 'Open Sans', sans-serif;
+  }
 
-h1 { font-size: 48px; color: #2C2E43;}
+h1 { font-size: 48px; color: #2C2E43; font-family: 'Roboto', sans-serif;}
 
 p{ font-size: 22px;}
 
@@ -79,7 +81,7 @@ border-radius: 4px;}
     }
   
     .input-fields {
-      width: 80%;
+      width: 90%;
     }
   
     .dropdown {
